@@ -11,6 +11,8 @@ public class SellCookie : MonoBehaviour
     public AudioSource cashTwo;
     public int generateTone;
     public AudioSource noCookie;
+    public GameObject coin;
+    public Transform spawnPoint;
 
     public void clickTheButton ()
     {
@@ -33,6 +35,7 @@ public class SellCookie : MonoBehaviour
             }
             GlobalCookies.CookieCount -= 1;
             GlobalCash.CashCount += 1;
+            Instantiate(coin, spawnPoint.position, spawnPoint.rotation);
         }
     }
 }

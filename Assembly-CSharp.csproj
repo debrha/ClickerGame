@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\AutoCookie.cs" />
     <Compile Include="Assets\Scripts\AutoSell.cs" />
+    <Compile Include="Assets\Scripts\CoinSpawn.cs" />
     <Compile Include="Assets\Scripts\CupcakeSpawn.cs" />
     <Compile Include="Assets\Scripts\DisasterScript.cs" />
     <Compile Include="Assets\Scripts\GameLoader.cs" />

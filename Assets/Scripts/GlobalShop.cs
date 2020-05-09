@@ -11,7 +11,7 @@ public class GlobalShop : MonoBehaviour
     public GameObject realText;
     public GameObject shopStats;
     public int currentCash;
-    public static int shopValue = 50;
+    public static int shopValue = 10;
     public static bool turnOffButton = false;
     public static int numberOfShops;
     public static int shopPerSec;
@@ -27,7 +27,7 @@ public class GlobalShop : MonoBehaviour
         shopStats.GetComponent<Text>().text = "Shops: " + numberOfShops + " at " + shopPerSec + " per second";
         fakeText.GetComponent<Text>().text = "Buy Shop - $" + shopValue;
         realText.GetComponent<Text>().text = "Buy Shop - $" + shopValue;
-        if (currentCash >= 50)
+        if (currentCash >= 10)
         {
             fakeButton.SetActive(false);
             realButton.SetActive(true);

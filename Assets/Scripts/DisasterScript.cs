@@ -10,6 +10,7 @@ public class DisasterScript : MonoBehaviour
     public int genChance;
     public bool disasterActive = false;
     public int cookieLoss;
+    public GameObject fireAnim;
 
     void Update()
     {
@@ -22,7 +23,7 @@ public class DisasterScript : MonoBehaviour
     IEnumerator StartDisaster()
     {
         disasterActive = true;
-        genChance = Random.Range(1, 200);
+        genChance = Random.Range(1, 20);
         if (cookieCheck >= genChance)
         {
             cookieLoss = Mathf.RoundToInt(GlobalCookies.CookieCount * 0.25f);

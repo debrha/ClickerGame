@@ -11,7 +11,7 @@ public class GlobalBaker : MonoBehaviour
     public GameObject realText;
     public GameObject bakerStats;
     public int currentCash;
-    public static int bakerValue = 50;
+    public static int bakerValue = 10;
     public static bool turnOffButton = false;
     public static int numberOfBakers;
     public static int bakePerSec;
@@ -27,7 +27,7 @@ public class GlobalBaker : MonoBehaviour
         bakerStats.GetComponent<Text>().text = "Bakers: " + numberOfBakers + " at " + bakePerSec + " per second";
         fakeText.GetComponent<Text>().text = "Hire Baker - $" + bakerValue;
         realText.GetComponent<Text>().text = "Hire Baker - $" + bakerValue;
-        if (currentCash >= 50)
+        if (currentCash >= 10)
         {
             fakeButton.SetActive(false);
             realButton.SetActive(true);

@@ -7,6 +7,8 @@ public class AutoSell : MonoBehaviour
     public bool SellingCookie = false;
     public static int CashIncrease = 1;
     public int InternalIncrease;
+    public GameObject coin;
+    public Transform spawnPoint;
 
     void Update()
     {
@@ -27,6 +29,10 @@ public class AutoSell : MonoBehaviour
         else
         {
             GlobalCash.CashCount += InternalIncrease;
+            for (int i = 0; i < InternalIncrease; i++)
+            {
+                Instantiate(coin, spawnPoint.position, spawnPoint.rotation);
+            }
             GlobalCookies.CookieCount -= 1;
             yield return new WaitForSeconds(1);
             SellingCookie = false;
