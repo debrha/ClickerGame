@@ -35,7 +35,8 @@ public class AutoSell : MonoBehaviour
             }
             GlobalCookies.CookieCount -= 1;
             yield return new WaitForSeconds(1);
-            SellingCookie = false;
+     
         }
+        SellingCookie = false;
     }
 }
